@@ -142,7 +142,8 @@ class coreSystem {
 	    details = newArr;
 	}
 	count++;
-    }
+    }//数组的扩容
+
     public void select() {
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("请输入你要查找房源的id:");
@@ -171,7 +172,8 @@ class coreSystem {
 		for (int i = 0; i < newArr.length; i++) {
 		    newArr[i] = details[i];
 		}
-		details = newArr;
+		details = newArr;//数组的减容
+		count--;
 	    } else {
 		System.out.println("不删除房源啦!");
 	    }
